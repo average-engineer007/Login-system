@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../public/login.css">
+</head>
+<body>
+    <style>
+        .register{
+    color: white;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-container{
+    margin-top: 100px;
+    margin-bottom: 200px;}
+
+.register a{
+    color: #c77a7a;
+}
+.login-container {
+    background-color: rgb(33, 9, 9);
+    padding: 4000px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.login-container h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+h2{
+    color: rgb(8, 7, 7);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-container{
+    margin-top: 100px;
+    max-width: 400px;
+    margin-bottom: 200px;
+    margin-left: 560px;
+    margin-top: 150px;
+    background-color: #a6d9fe;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+
+}
+        body {
+            background-size: cover; 
+        }
+        #login{
+            color: rgb(216, 155, 43);
+        }
+
+    </style>
+    <div class="form-container">
+        <h2 class="Login">Login</h2>
+        <form action="/login" method="post" >
+            <div class="form-group">
+                <input placeholder="Username" name="userid" id="name" type="text" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input placeholder="Password" name="password" id="password" type="password" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="mysubmit()" id="loginbutton">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        function mysubmit() {
+            var passwordInput = document.getElementById("password");
+            passwordInput.value = md5(passwordInput.value);
+        }
+
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+</body>
+</html>
